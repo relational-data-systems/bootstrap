@@ -197,6 +197,17 @@ module.exports = function (grunt) {
         src: 'less/bootstrap-system-builder.less',
         dest: 'dist/css/<%= pkg.name %>-system-builder.css'
       },
+      compileGaspInternal: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: '<%= pkg.name %>-gasp-internal.css.map',
+          sourceMapFilename: 'dist/css/<%= pkg.name %>-gasp-internal.css.map'
+        },
+        src: 'less/bootstrap-gasp-internal.less',
+        dest: 'dist/css/<%= pkg.name %>-gasp-internal.css'
+      },
       compileIlis: {
         options: {
           strictMath: true,
@@ -248,6 +259,12 @@ module.exports = function (grunt) {
           map: true
         },
         src: 'dist/css/<%= pkg.name %>-system-builder.css'
+      },
+      gaspInternal: {
+        options: {
+          map: true
+        },
+        src: 'dist/css/<%= pkg.name %>-gasp-internal.css'
       },
       ilis: {
         options: {
@@ -317,6 +334,10 @@ module.exports = function (grunt) {
       minifySystemBuilder: {
         src: 'dist/css/<%= pkg.name %>-system-builder.css',
         dest: 'dist/css/<%= pkg.name %>-system-builder.min.css'
+      },
+      minifyGaspInternal: {
+        src: 'dist/css/<%= pkg.name %>-gasp-internal.css',
+        dest: 'dist/css/<%= pkg.name %>-gasp-internal.min.css'
       },
       minifyIlis: {
         src: 'dist/css/<%= pkg.name %>-ilis.css',
@@ -567,6 +588,7 @@ module.exports = function (grunt) {
     'less:compileTheme',
     'less:compileGrid',
     'less:compileSystemBuilder',
+    'less:compileGaspInternal',
     'less:compileIlis',
     'less:compileSailis'
   ]);
@@ -576,6 +598,7 @@ module.exports = function (grunt) {
     'autoprefixer:theme',
     'autoprefixer:grid',
     'autoprefixer:systemBuilder',
+    'autoprefixer:gaspInternal',
     'autoprefixer:ilis',
     'autoprefixer:sailis',
     'csscomb:dist',
@@ -583,6 +606,7 @@ module.exports = function (grunt) {
     'cssmin:minifyTheme',
     'cssmin:minifyGrid',
     'cssmin:minifySystemBuilder',
+    'cssmin:minifyGaspInternal',
     'cssmin:minifyIlis',
     'cssmin:minifySailis'
   ]);
