@@ -332,3 +332,19 @@ a.list-group-item {
 .popover {
   color: @text-color;
 }
+
+// show red "*" on required field's label 
+.required .control-label::after {
+  content: ' *';
+  color: #e32;
+  display:inline;
+}
+
+// fix close button in sf-array position bug
+.sf-array-close-button {
+  position: absolute;
+  z-index: 20;
+  right: 5px;
+  top: 5px;
+}
+
