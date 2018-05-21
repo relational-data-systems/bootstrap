@@ -6959,13 +6959,13 @@ input:focus {
   background-color: #3be6c4;
 }
 .close {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   opacity: .4;
 }
 .close:hover,
 .close:focus {
-  color: #fff;
+  color: #000;
   opacity: 1;
 }
 .alert .alert-link {
@@ -7019,5 +7019,16 @@ a.list-group-item-danger.active:focus {
 }
 .popover {
   color: #2c3e50;
+}
+.required .control-label::after {
+  display: inline;
+  color: #e32;
+  content: ' *';
+}
+.sf-array-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 20;
 }
 /*# sourceMappingURL=bootstrap-gasp-internal.css.map */
