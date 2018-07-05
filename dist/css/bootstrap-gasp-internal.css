@@ -7031,4 +7031,8 @@ a.list-group-item-danger.active:focus {
   right: 5px;
   z-index: 20;
 }
+/* to hide feedback glyphicon when disabled/readonly */
+input[disabled] + .form-control-feedback {
+  display: none;
+}
 /*# sourceMappingURL=bootstrap-gasp-internal.css.map */

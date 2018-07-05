@@ -5907,4 +5907,8 @@ body {
   margin-top: 32px;
   color: blue;
 }
+/* to hide feedback glyicon when disabled/readonly */
+input[disabled] + .form-control-feedback {
+  display: none;
+}
 /*# sourceMappingURL=bootstrap-system-builder.css.map */
